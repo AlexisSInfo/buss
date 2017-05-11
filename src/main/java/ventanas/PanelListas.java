@@ -1,5 +1,6 @@
 package ventanas;
 
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import javax.swing.*;
 
@@ -10,6 +11,7 @@ public class PanelListas extends JPanel {
     private JLabel origen;
     private JLabel destino;
     private JButton btnBuscar; 
+    private JLabel espacio;
 
     public PanelListas() {
         initComponent();
@@ -18,6 +20,8 @@ public class PanelListas extends JPanel {
     private void initComponent(){
         GridLayout distribucion = new GridLayout(20, 2);
         this.setLayout(distribucion);
+        this.espacio = new JLabel("");
+        this.add(espacio);
         this.origen = new JLabel();
         this.origen.setText("Origen");
         this.add(origen);
