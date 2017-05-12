@@ -13,6 +13,8 @@ public class VentanaPrincipal extends JFrame {
     private JLabel vacio;
     private JLabel im;
     private ImageIcon icono;
+    private String destino;
+    private String origen;
     
     public VentanaPrincipal(){
         initComponent();
@@ -20,15 +22,12 @@ public class VentanaPrincipal extends JFrame {
     
     private void initComponent(){
         setTitle("BusF - Team Rocket 1.0");
-        setSize(800, 540);// dimension ventana        
-        //setLocationRelativeTo(null);    // decirle que aparesca en una parte especifica 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // que se cierre con el X
+        setSize(800, 540);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
-        
-        //GridLayout distribucion = new GridLayout(1,2);
         FlowLayout distribucion = new FlowLayout();
         this.setLayout(distribucion);
-        panelListas = new PanelListas();
+        panelListas = new PanelListas(this);
         panelListas.setPreferredSize(new Dimension(250, 500));
         this.add(this.panelListas, BorderLayout.WEST);
         this.im = new JLabel();
@@ -36,6 +35,7 @@ public class VentanaPrincipal extends JFrame {
         this.im.setIcon(icono);
         this.add(im, BorderLayout.NORTH);
         
-        setVisible(true);       // mostrar ventana 
+        setVisible(true);
     }
+    
 }

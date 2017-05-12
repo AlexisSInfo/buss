@@ -2,18 +2,25 @@ package ventanas;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
-public class PanelListas extends JPanel {
+public class PanelListas extends JPanel{
+
     private JComboBox<String> cOrigen;
     private JComboBox<String> cDestino;
     private JLabel origen;
     private JLabel destino;
     private JButton btnBuscar; 
     private JLabel espacio;
-
-    public PanelListas() {
+    public String strDest;
+    public String strOrig;
+    private JFrame parent;
+    
+    public PanelListas(JFrame parent) {
+        this.parent = parent;
         initComponent();
     }
     
@@ -40,8 +47,8 @@ public class PanelListas extends JPanel {
         this.cOrigen.setSelectedIndex(8);
         this.add(cOrigen);
         
-        this.destino = new JLabel();
-        this.destino.setText("Destino");
+        this.destino = new JLabel("destino");
+        //this.destino.setText("Destino");
         this.add(destino);
         
         this.cDestino = new JComboBox<String>();
@@ -58,7 +65,22 @@ public class PanelListas extends JPanel {
         this.add(cDestino);
         
         this.btnBuscar = new JButton("Buscar");
+        this.btnBuscar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) { 
+                presionarBuscar();
+            } 
+        } );
         this.add(btnBuscar);
     }
     
+        private void presionarBuscar(){
+        strDest = cDestino.getSelectedItem().toString();
+        strOrig = cOrigen.getSelectedItem().toString();
+        VentanaRecorridos vent = new VentanaRecorridos(strOrig, strDest);
+        vent.setVisible(true);
+        this.parent.dispose();
+        }
+    
+   
 }
