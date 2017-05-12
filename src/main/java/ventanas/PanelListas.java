@@ -43,12 +43,11 @@ public class PanelListas extends JPanel{
         this.cOrigen.addItem("Pucon");
         this.cOrigen.addItem("Puren");
         this.cOrigen.addItem("Temuco");
-                //setModel(new DefaultComboBoxModel<>(new String[]{"Curacautin","Gorbea","Lautaro","Loncoche","LosSauces", "Lumaco", "Pucon","Puren","Temuco"}));
         this.cOrigen.setSelectedIndex(8);
         this.add(cOrigen);
         
-        this.destino = new JLabel("destino");
-        //this.destino.setText("Destino");
+        this.destino = new JLabel();
+        this.destino.setText("Destino");
         this.add(destino);
         
         this.cDestino = new JComboBox<String>();
@@ -61,7 +60,6 @@ public class PanelListas extends JPanel{
         this.cDestino.addItem("Pucon");
         this.cDestino.addItem("Puren");
         this.cDestino.addItem("Temuco");
-        //this.cDestino.setModel(new DefaultComboBoxModel<>(new String[]{"Curacautin","Gorbea","Lautaro","loncoche","LosSauces", "Lumaco", "Pucon","Puren","Temuco"}));
         this.add(cDestino);
         
         this.btnBuscar = new JButton("Buscar");

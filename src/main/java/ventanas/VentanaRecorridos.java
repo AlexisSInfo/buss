@@ -21,11 +21,11 @@ public class VentanaRecorridos extends JFrame {
     
     public void initComponent (){
         setTitle("BusF - Team Rocket 1.0");
-        setSize(800, 600);// dimension ventana        
-        //setLocationRelativeTo(null);    // decirle que aparesca en una parte especifica 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // que se cierre con el X
+        setSize(800, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         GridLayout distribucion = new GridLayout(2, 1);
+        //BoxLayout distribucion = new BoxLayout(this, 2);
         this.setLayout(distribucion);
         panel1 = new PanelGraficsEmpresas(origen, destino);
         this.add(panel1);

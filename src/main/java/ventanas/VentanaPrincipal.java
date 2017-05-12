@@ -32,6 +32,8 @@ public class VentanaPrincipal extends JFrame {
         this.add(this.panelListas, BorderLayout.WEST);
         this.im = new JLabel();
         this.icono = new ImageIcon("C:\\Users\\alexis\\Documents\\NetBeansProjects\\Buss\\src\\main\\java\\ventanas\\Mapa.png");
+        /*no pude hacer que el programa ingresara la imagen desde las librerias
+        del proyecto*/
         this.im.setIcon(icono);
         this.add(im, BorderLayout.NORTH);
         
