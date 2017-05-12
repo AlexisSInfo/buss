@@ -24,7 +24,7 @@ public class PanelGraficsEmpresas extends JPanel {
     }
     
     private void initComponent(){
-        GridLayout distribucion = new GridLayout(2,4);
+        GridLayout distribucion = new GridLayout(2,3);
         this.setLayout(distribucion);
         espacio1 = new JLabel();
         espacio2 = new JLabel();
@@ -33,7 +33,7 @@ public class PanelGraficsEmpresas extends JPanel {
         labelOrigen = new JLabel("Origen");
         this.add(labelOrigen);
         this.add(espacio1);
-        this.add(espacio3);
+        //this.add(espacio3);
         labelDestino = new JLabel("Destino");
         this.add(labelDestino);
         origenTField = new JTextField();
@@ -41,7 +41,7 @@ public class PanelGraficsEmpresas extends JPanel {
         this.origenTField.setEditable(false);
         this.add(origenTField);
         this.add(espacio2);
-        this.add(espacio4);
+        //add(espacio4);
         destinoTField = new JTextField();
         this.destinoTField.setText(this.destino);
         this.destinoTField.setEditable(false);
