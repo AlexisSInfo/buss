@@ -13,7 +13,8 @@ public class VentanaRecorridos extends JFrame {
     private String destino;
     private JLabel espacio;
     
-    public VentanaRecorridos(String origen, String destino){
+    public VentanaRecorridos(String origen, String destino){//recibe los parametros de inicio de la ventana anterior
+        //asignar los parametros de la ventana anterior
         this.origen = origen;
         this.destino = destino;
         initComponent();
@@ -25,11 +26,10 @@ public class VentanaRecorridos extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         GridLayout distribucion = new GridLayout(2, 1);
-        //BoxLayout distribucion = new BoxLayout(this, 2);
         this.setLayout(distribucion);
-        panel1 = new PanelGraficsEmpresas(origen, destino);
-        this.add(panel1);
-        panel2 = new PanelListasEmpresas();
+        panel1 = new PanelGraficsEmpresas(origen, destino);//entrega los parametros anteriores para mostrarlos en pantalla
+        this.add(panel1);//añade el panel con la informacion seleccionada
+        panel2 = new PanelListasEmpresas();//este panel contiene la lista de las empresas que hacen el recorrido pedido
         this.add(panel2);
     }
     
